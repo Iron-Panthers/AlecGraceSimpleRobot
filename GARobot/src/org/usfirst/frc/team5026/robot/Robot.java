@@ -24,6 +24,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 public class Robot extends IterativeRobot {
 
 	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
+	public static final Intake intake =  new Intake();
 	public static OI oi;
 
     Command autonomousCommand;
@@ -31,6 +32,8 @@ public class Robot extends IterativeRobot {
 
     RobotDrive myRobot;
     Joystick stick;
+    
+    public static Hardware hardware;
     int autoLoopCounter;
     /**
      * This function is run when the robot is first started up and should be
@@ -43,6 +46,7 @@ public class Robot extends IterativeRobot {
         myRobot = new RobotDrive(0,1);
     	stick = new Joystick(0);
 		oi = new OI();
+		hardware = new Hardware();
         chooser = new SendableChooser();
         chooser.addDefault("Default Auto", new ExampleCommand());
 //        chooser.addObject("My Auto", new MyAutoCommand());

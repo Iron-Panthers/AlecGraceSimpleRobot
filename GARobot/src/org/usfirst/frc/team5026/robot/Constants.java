@@ -9,4 +9,6 @@ public class Constants {
 	public static final int DRIVE_RIGHT_MOTOR_2 = 5;
 	public static final int DRIVE_RIGHT_MOTOR_3 = 7;
 	
+	public static final int INTAKEMOTOR  = 1;
+	
 }

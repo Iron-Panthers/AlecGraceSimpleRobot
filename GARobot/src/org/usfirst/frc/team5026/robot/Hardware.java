@@ -6,7 +6,7 @@ public class Hardware {
 	public MotorGroup leftDrive;
 	public MotorGroup rightDrive;
 	
-	public TalonSRX intakeMotor;
+	public Talon intakeMotor;
 
 	public Hardware() {
 		Talon[] leftMotors = {new Talon(Constants.DRIVE_LEFT_MOTOR_1), new Talon(Constants.DRIVE_LEFT_MOTOR_2), new Talon(Constants.DRIVE_LEFT_MOTOR_3)};
@@ -17,6 +17,6 @@ public class Hardware {
 		leftDrive = new MotorGroup(leftInverted, leftMotors);
 		rightDrive = new MotorGroup(rightInverted, rightMotors);
 		
-		intakeMotor = new TalonSRX(Constants.INTAKEMOTOR);
+		intakeMotor = new Talon(Constants.INTAKEMOTOR);
 	}
 }

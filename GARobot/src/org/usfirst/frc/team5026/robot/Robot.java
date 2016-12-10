@@ -38,14 +38,13 @@ public class Robot extends IterativeRobot {
     /**
      * This function is run when the robot is first started up and should be
      * used for any initialization code.
-     */
-    
-    public static 
+     */ 
     
     public void robotInit() {
         myRobot = new RobotDrive(0,1);
     	stick = new Joystick(0);
 		oi = new OI();
+		//drive = new Drive();
 		hardware = new Hardware();
         chooser = new SendableChooser();
         chooser.addDefault("Default Auto", new ExampleCommand());
